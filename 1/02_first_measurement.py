@@ -1,6 +1,5 @@
 from time import perf_counter
 
-
 def calculate(n):
     total = 0
 

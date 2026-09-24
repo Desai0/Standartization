@@ -1,5 +1,4 @@
 from measurements import measure_time
-
 numbers_list = list(
     range(1_000_000)
 )
@@ -7,11 +6,8 @@ numbers_list = list(
 numbers_set = set(
     numbers_list
 )
-
-
 def search_list():
     return -1 in numbers_list
-
 
 def search_set():
     return -1 in numbers_set

@@ -15,29 +15,25 @@ sizes = [
     4_000,
 ]
 
-
 for n in sizes:
     numbers = create_unique_data(n)
-
     nested_time = measure_time(
         has_duplicates_nested,
         numbers,
         repeats=3
     )
-
     set_time = measure_time(
         has_duplicates_set,
         numbers,
         repeats=5
     )
-
     print(
         f"{n=} | "
         f"nested={nested_time:.6f} | "
         f"set={set_time:.6f}"
     )
 
-# Память измеряется отдельно от времени. Подготовка входа — до замера.
+# Память отдельно от времени
 numbers = create_unique_data(4_000)
 for name, func in [("nested", has_duplicates_nested), ("set", has_duplicates_set)]:
     _, peak = measure_memory(func, numbers)

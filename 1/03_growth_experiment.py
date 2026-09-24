@@ -1,14 +1,9 @@
 from time import perf_counter
-
-
 def calculate(n):
     total = 0
-
     for i in range(n):
         total += i
-
     return total
-
 
 sizes = [
     10_000,
@@ -16,8 +11,6 @@ sizes = [
     1_000_000,
     10_000_000,
 ]
-
-
 for n in sizes:
     start = perf_counter()
 
